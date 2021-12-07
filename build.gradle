@@ -1,0 +1,39 @@
+plugins {
+	id 'application'
+	id 'org.openjfx.javafxplugin' version '0.0.10'
+	id 'org.springframework.boot' version '2.6.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+
+}
+mainClassName = 'com/example/QuickCon20/GUI/QuickConGUI.java'
+javafx {
+	version = "17.0.0.1"
+	modules = [ 'javafx.controls', 'javafx.fxml'  ]
+}
+
+
+
+dependencies {
+
+	implementation 'org.threeten:threetenbp:1.5.2'
+	implementation 'mysql:mysql-connector-java:8.0.25'
+	implementation 'org.apache.commons:commons-dbcp2:2.9.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework:spring-web:5.3.13'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
