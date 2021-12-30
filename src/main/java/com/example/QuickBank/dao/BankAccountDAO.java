@@ -1,13 +1,13 @@
-package com.example.QuickCon20.dao;
+package com.example.QuickBank.dao;
 
 import java.util.List;
 
-import com.example.QuickCon20.model.BankAccountInfo;
+import com.example.QuickBank.model.BankAccountInfo;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import com.example.QuickCon20.entity.BankAccount;
-import com.example.QuickCon20.exeption.BankTransactionException;
+import com.example.QuickBank.entity.BankAccount;
+import com.example.QuickBank.exeption.BankTransactionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;

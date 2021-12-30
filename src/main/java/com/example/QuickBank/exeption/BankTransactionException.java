@@ -1,4 +1,4 @@
-package com.example.QuickCon20.exeption;
+package com.example.QuickBank.exeption;
 
 public class BankTransactionException extends Exception {
     private static final long serialVersionUID = -3128681006635769411L;

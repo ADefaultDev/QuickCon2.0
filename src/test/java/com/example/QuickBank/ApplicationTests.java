@@ -1,4 +1,4 @@
-package com.example.QuickCon20;
+package com.example.QuickBank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

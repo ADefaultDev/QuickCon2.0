@@ -1,19 +1,18 @@
-package com.example.QuickCon20.entity;
+package com.example.QuickBank.model;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "Bank_Account")
-public class BankAccount {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+public class BankAccountInfo {
     private Long id;
-    @Column(name = "Full_Name", length = 128, nullable = false)
     private String fullName;
-    @Column(name = "Balance", nullable = false)
     private double balance;
 
+    public BankAccountInfo() {
+    }
+    // Used in Hibernate query.
+    public BankAccountInfo(Long id, String fullName, double balance) {
+        this.id = id;
+        this.fullName = fullName;
+        this.balance = balance;
+    }
     public Long getId() {
         return id;
     }
@@ -31,5 +30,10 @@ public class BankAccount {
     }
     public void setBalance(double balance) {
         this.balance = balance;
+    }
+
+    @Override
+    public String toString(){
+        return "BA info: balance:" + getId() + " full name: " + getFullName() + " balance:" +  getBalance();
     }
 }
